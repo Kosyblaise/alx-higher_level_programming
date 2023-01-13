@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-def search_replace(my_list, search, replace):
-    def find_search(element):
-        return element if element != search else replace
-    return list(map(find_search, my_list))
+def weight_average(my_list=[]):
+    if my_list and len(my_list):
+        num = 0
+        denom = 0
+        for tup in my_list:
+            num += (tup[0] * tup[1])
+            denom += (tup[1])
+        return (num/denom)
+    return 0
